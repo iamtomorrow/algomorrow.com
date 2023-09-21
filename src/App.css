@@ -1,0 +1,44 @@
+
+.global--container {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+.header--container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.main--container {
+  width: 100%;
+  height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo {
+  font-weight: 600;
+  color: #ffffff;
+  animation: LogoAnimation 8s ease infinite;
+}
+.main-message {
+  color: #009CFF;
+  font-size: 16px;
+}
+
+@keyframes LogoAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
