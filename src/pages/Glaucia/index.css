@@ -1,0 +1,22 @@
+
+.b-global--container {
+    background-image: url('../../../public/media/images/backgrounds/glaucia-background.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.b-header--container {
+    background-color: rgba(0, 0, 0, 0.433);
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.207);
+}
