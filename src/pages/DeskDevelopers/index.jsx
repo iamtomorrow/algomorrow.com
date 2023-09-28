@@ -5,30 +5,32 @@ import YoutubeIcon from 'remixicon-react/YoutubeFillIcon';
 import FacebookIcon from 'remixicon-react/FacebookFillIcon';
 
 import { Link } from 'react-router-dom';
-import Logo from '../../../public/media/images/logos/desk-developers-logo.jpg';
+import Logo from '../../../public/media/images/logos/tomorrow-developers.png';
 import './index.css';
 
 export const DeskDevelopers = ( ) => {
     return (
         <div className="a-global--container">
             <div className='a-header--container'>
-                <div className='desk-developers-logo logo--container'>
-                    <img className='header-logo' id='desk-developers-logo' src={ Logo } />
-                </div>
-                <nav className='navbar-center--container navbar'>
-                <ul className='navbar-list'>
-                    <li className='a-navbar-item'>Learn</li>
-                    <li className='a-navbar-item'>Develop</li>
-                    <li className='a-navbar-item'>Design</li>
-                    <li className='a-navbar-item'>Products</li>
-                    <li className='a-navbar-item'>Who We Are</li>
-                </ul>
-                </nav>
-                <nav className='navbar-end--container navbar'>
+                <div className='inner-header--container'>
+                    <div className='desk-developers-logo logo--container'>
+                        <img className='a-header-logo' id='tomorrow-developers-logo' src={ Logo } />
+                    </div>
+                    <nav className='navbar-center--container navbar'>
+                    <ul className='navbar-list'>
+                        <li className='a-navbar-item'>Learn</li>
+                        <li className='a-navbar-item'>Develop</li>
+                        <li className='a-navbar-item'>Design</li>
+                        <li className='a-navbar-item'>Support</li>
+                        <li className='a-navbar-item'>Who We Are</li>
+                    </ul>
+                    </nav>
+                    <nav className='navbar-end--container navbar'>
 
-                </nav>
+                    </nav>
+                </div>
             </div>
-            <div className='a-main--container'>
+            <div className='a-main--container main--container'>
                 <div className='a-main-inner--container'>
                     <h1 className='main-h1'>Be part of our developer team</h1>
                     <p className='main-p'>Using our tools and services, you can provide an exceptional experience to Desk users around the world</p>
@@ -37,6 +39,15 @@ export const DeskDevelopers = ( ) => {
                         <button className='join-now-button main-button'>Join Now</button>
                     </div>
                 </div>
+            </div>
+
+            <div className='container-wide-large'>
+                <div className='container-wide-large-header'>
+                    <h1 className='wide-large-header-h1'>Explore more</h1>
+                </div>
+                <main className='container-wide-large-body'>
+bfgb
+                </main>
             </div>
 
             <footer className='footer--container'>

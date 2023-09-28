@@ -20,3 +20,6 @@
     justify-content: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.207);
 }
+.b-header-logo {
+    width: 60px;
+}

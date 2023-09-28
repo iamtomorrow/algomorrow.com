@@ -6,22 +6,24 @@ import './index.css';
 export const Glaucia = () => {
     return (
         <div className="b-global--container">
-            <div className='b-header--container'>
-                <div className='glaucia-logo logo--container'>
-                    <img className='header-logo' id='desk-developers-logo' src={ Logo } />
-                </div>
-                <nav className='navbar-center--container navbar'>
-                <ul className='navbar-list'>
-                    <li className='a-navbar-item'>Learn</li>
-                    <li className='a-navbar-item'>Develop</li>
-                    <li className='a-navbar-item'>Design</li>
-                    <li className='a-navbar-item'>Products</li>
-                    <li className='a-navbar-item'>Who We Are</li>
-                </ul>
-                </nav>
-                <nav className='navbar-end--container navbar'>
+            <div className='header--container'>
+                <div className='inner-header--container'>
+                    <div className='glaucia-logo logo--container'>
+                        <img className='b-header-logo' id='glaucia-developers-logo' src={ Logo } />
+                    </div>
+                    <nav className='navbar-center--container navbar'>
+                    <ul className='navbar-list'>
+                        <li className='a-navbar-item'>Learn</li>
+                        <li className='a-navbar-item'>Develop</li>
+                        <li className='a-navbar-item'>Design</li>
+                        <li className='a-navbar-item'>Products</li>
+                        <li className='a-navbar-item'>Who We Are</li>
+                    </ul>
+                    </nav>
+                    <nav className='navbar-end--container navbar'>
 
-                </nav>
+                    </nav>
+                </div>
             </div>
             <div className='a-main--container'>
                 <div className='a-main-inner--container'>
