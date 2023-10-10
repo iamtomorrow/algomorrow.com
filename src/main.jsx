@@ -13,6 +13,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { Careers } from './pages/Desk/pages/Careers/Careers';
+import { Edge } from './pages/Desk/pages/Edge/Edge';
+import { DeskStore } from './pages/Desk/pages/DeskStore/DeskStore';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -28,6 +30,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/Desk/services' element={ <Services /> } />
         <Route path='/Desk/careers' element={ <Careers /> } />
         <Route path='/Desk/contactus' element={ <ContactUs /> } />
+        <Route path='/Desk/edge' element={ <Edge /> } />
+        <Route path='/Desk/store' element={ <DeskStore /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

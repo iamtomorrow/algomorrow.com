@@ -72,8 +72,12 @@
   /* animation: LogoAnimation 8s ease infinite; */
 }
 #algomorrow-logo {
+  transition: all .5s ease;
   position: absolute;
-  
+}
+#algomorrow-logo:hover {
+  transition: all .5s ease;
+  box-shadow: 0 0 18px #0055ff88;
 }
 
 .logo--container {

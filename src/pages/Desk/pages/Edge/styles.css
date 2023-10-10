@@ -1,0 +1,11 @@
+
+.edge-global--container {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #0041C0, #006DFF, #0C1444);
+}
+.edge-global-inner--container {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#00000000, #000000);
+}

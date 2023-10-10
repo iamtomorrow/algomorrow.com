@@ -1,0 +1,7 @@
+
+.product-card--container {
+    width: 200px;
+    height: 300px;
+    box-shadow: 0 0 14px #99999948;
+    border-radius: 10px;
+}

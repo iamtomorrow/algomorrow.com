@@ -5,10 +5,12 @@ import FacebookIcon from 'remixicon-react/FacebookFillIcon';
 import LikedinIcon from 'remixicon-react/LinkedinFillIcon';
 import { Header } from "./Header";
 
+import Logo from '../../../public/media/images/logos/desk-logo.png';
+
 export const Desk = ( ) => {
     return (
         <div className="a-global--container">
-            <Header />
+            <Header Logo={ Logo }/>
 
             <div className='a-main--container main--container'>
                 <div className='a-main-inner--container'>

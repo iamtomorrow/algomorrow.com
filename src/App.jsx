@@ -13,11 +13,10 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='global--container'>
+    <div className='a-global--container'>
       <header className='header--container'>
         <div className='inner-header--container'>
           <div className='logo--container'>
-            {/* <p id='logo'>algomorrow</p> */}
             <img src={ Logo } id='algomorrow-logo' className='header-logo' />
           </div>
           <nav className='navbar-center--container navbar'>
@@ -34,15 +33,16 @@ function App() {
           </nav>
         </div>
       </header>
+
       <main className='main--container'>
         <p className='main-p'>Who we are powering</p>
         <div className='brands--container'>
           <div className='brand--container'>
             <img className='brand-logo' src={ GlauciaLogo } />
           </div>
-          <div className='brand--container'>
+          <Link to={'/Desk'} className='brand--container link'>
             <img className='brand-logo' src={ DeskLogo } />
-          </div>
+          </Link>
           <div className='brand--container'>
             <img className='brand-logo' src={ UnderSorrowLogo } />
           </div>
