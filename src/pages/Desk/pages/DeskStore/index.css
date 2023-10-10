@@ -118,7 +118,6 @@
     background: linear-gradient(#008FE0, #001374);
 }
 
-
 .desk-store-main--container {
     width: 100%;
     min-height: 100%;
@@ -161,10 +160,14 @@
     width: 100%;
     height: 100%;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 .footer-description-column--container {
     width: 100%;
-    height: 10%;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding: 20px 10% 0 10%;
@@ -173,6 +176,57 @@
     margin: 3px 0 3px 0;
     font-size: 13px;
     color: #F8F8F8;
+    text-align: center;
+}
+
+.footer-content--container {
+    width: 100%;
+    height: 100%;
+}
+.footer-content-inner--container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+.footer-content-left--container {
+    min-width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-content-logo {
+    width: 120px;
+}
+.footer-content-right--container  {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-copyright--container {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-copyright-left--conatiner,
+.footer-copyright-right--container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-copyright-p {
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
 }
 
 @media screen and (max-width: 900px) {
@@ -185,5 +239,9 @@
 
     .desk-stote-content--container {
         align-items: center;
+    }
+
+    .footer-content-inner--container {
+        flex-direction: column;
     }
 }

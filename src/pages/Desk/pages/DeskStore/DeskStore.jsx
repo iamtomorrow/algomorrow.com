@@ -3,6 +3,8 @@ import Logo from '../../../../../public/media/images/logos/desk-logo.png';
 import './index.css';
 
 import { Link } from 'react-router-dom';
+import favicon from './media/images/icons/deskstore-logo.ico';
+import DeskStoreLogo from './media/images/logos/deskstore-footer-logo.png';
 
 import ShoppingCartIcon from 'remixicon-react/ShoppingCart2LineIcon';
 import ArrowDownIcon from 'remixicon-react/ArrowDownLineIcon';
@@ -19,14 +21,20 @@ export const DeskStore = ( ) => {
     }
 
     useEffect(( ) => {
-        document.title = "Desk Store";
+        document.title = "Desk Online Store - All Desk products in one place.";
+        let link = document.createElement('link');
+        link.rel = 'icon';
+        document.head.appendChild(link);
+        link.href = favicon;
     })
 
     const products = [
         {
             name: "Dell Inspiron 5556",
             description: "",
-            price: "2,100.00"
+            price: "2,100.00",
+            brand: "DELL",
+            image: "https://images.yaoota.com/iLdtUruNaVK3hYjJCDmORKBcQS0=/trim/fit-in/500x500/filters:quality(80)/yaootaweb-production-ke/media/crawledproductimages/9367dd9a37b8d864f00ae16d981828d92892ef11.jpg",
         }
     ]
 
@@ -104,7 +112,11 @@ export const DeskStore = ( ) => {
                             <div className='desk-store-right-inner--container'>
                                 { products &&
                                     products.map((item) => (
-                                        <ProductCard />
+                                        <ProductCard name={ item.name }
+                                            price={ item.price }
+                                            brand={ item.brand }
+                                            description={ item.description }
+                                            image={ item.image } />
                                     ))
                                 }
                             </div>
@@ -120,10 +132,27 @@ export const DeskStore = ( ) => {
                             <p>- All the products are registered on Desk license.</p>
                         </div>
                         <div className='footer-content--container'>
+                            <div className='footer-content-inner--container'>
+                                <div className='footer-content-left--container'>
+                                    <img className='footer-content-logo' src={ DeskStoreLogo } />
+                                </div>
+                                <div className='footer-content-right--container'>
 
+                                </div>
+                            </div>
                         </div>
                         <div className='footer-copyright--container'>
-
+                            <div className='footer-copyright-left--conatiner'>
+                                <p className='footer-copyright-p'>@ Desk Technologies.</p>
+                            </div>
+                            <div className='footer-copyright-right--container'>
+                                <p className='footer-copyright-p'>
+                                    Payment methods accepted: PIX, Credit card (Mastercard, Visa), Bancary slip, and Picpay.
+                                </p>
+                                <p className='footer-copyright-p'>
+                                    Desk Store is a extension of Desk Technologies which is a division of Group Algomorrow, Inc. Visit us at algomorrow.com.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </footer>
