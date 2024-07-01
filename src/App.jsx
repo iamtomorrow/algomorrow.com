@@ -2,7 +2,7 @@
 import DeskLogo from '../public/media/images/logos/desk-logo.png';
 import GlauciaLogo from '../public/media/images/logos/glaucia-logo.png';
 import UnderSorrowLogo from '../public/media/images/logos/under-sorrow-logo.png';
-import Logo from '../public/media/images/logos/algomorrow-header-logo.png';
+import Logo from '../public/media/images/logos/logo.jpg';
 
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
