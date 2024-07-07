@@ -1,5 +1,5 @@
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import InstagramIcon from "remixicon-react/InstagramLineIcon";
 import { RiTwitterXFill } from "react-icons/ri"
 import FacebookIcon from 'remixicon-react/FacebookFillIcon';
@@ -13,6 +13,23 @@ import favicon from './images/favicon.png'
 import "./index.css"
 
 export const Desk = ( ) => {
+    const fullPhrase = "Free. Friedly. Sponsor Block. ";
+    const [ phrase, setPhrase ] = useState("");
+    const [ count, setCount ] = useState();
+
+    useEffect(( ) => {
+        setTimeout(( ) => {
+            if ( count <= fullPhrase.length ) {
+                setTimeout(( ) => {
+                    setPhrase( prev => prev += fullPhrase.at(count-1));
+                    setCount( prev => prev +=1 );
+                }, 100);
+            } else {
+                setPhrase("");
+                setCount(0);
+            }
+        }, count <= fullPhrase.length ? 100 : 1000);
+    })
 
     useEffect(( ) => {
         document.title = "Desk - We are powered by developers. We powered developers.";
@@ -37,7 +54,16 @@ export const Desk = ( ) => {
                             marginLeft: 14,
                         }}>Desk</h1>
                     </div>
-                    <h3 className='main-h3'>Free. Friedly. Sponsor Block</h3>
+                    <div style={{
+                        width: "100%",
+                        height: 50,
+                        // backgroundColor: "red",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center"
+                    }}>
+                        <h3 className='main-h3'>{ phrase }</h3>
+                    </div>
                     <div className='main-bottom--container'>
                         <div style={{
                             width: "100%",
