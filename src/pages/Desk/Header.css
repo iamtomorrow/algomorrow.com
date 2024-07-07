@@ -1,0 +1,16 @@
+
+.desk-header--container {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+.desk-inner-header--container {
+    height: 100%;
+    display: flex;
+}
+
+.header-icon {
+    cursor: pointer;
+    color: #ffffff;
+}

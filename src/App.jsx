@@ -15,14 +15,20 @@ function App() {
   return (
     <div className='a-global--container'>
       <header className='header--container'>
-        <div className='inner-header--container'>
+        <div style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "row",
+          // backgroundColor: "yellow"
+        }}>
           <div className='logo--container'>
             <img src={ Logo } id='algomorrow-logo' className='header-logo' />
           </div>
           <nav className='navbar-center--container navbar'>
             <ul className='navbar-list'>
               <Link className='navbar-item link' to={"/developers"}>Developers</Link>
-              <Link className='navbar-item link' to={"/glaucia"}>Discover</Link>
+              {/* <Link className='navbar-item link' to={"/glaucia"}>Discover</Link> */}
               <Link className='navbar-item link' to={"/technology"}>Technology</Link>
               <Link className='navbar-item link' to={"/creations"}>Our Creations</Link>
               <Link className='navbar-item link' to={"/whoweare"}>Who We Are</Link>
@@ -37,9 +43,6 @@ function App() {
       <main className='main--container'>
         <p className='main-p'>Who we are powering</p>
         <div className='brands--container'>
-          <div className='brand--container'>
-            <img className='brand-logo' src={ GlauciaLogo } />
-          </div>
           <Link to={'/Desk'} className='brand--container link'>
             <img className='brand-logo' src={ DeskLogo } />
           </Link>
