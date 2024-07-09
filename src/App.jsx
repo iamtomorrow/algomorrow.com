@@ -20,7 +20,7 @@ function App() {
           height: "100%",
           display: "flex",
           flexDirection: "row",
-          // backgroundColor: "yellow"
+          justifyContent: "center",
         }}>
           <div className='logo--container'>
             <img src={ Logo } id='algomorrow-logo' className='header-logo' />

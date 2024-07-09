@@ -1,9 +1,10 @@
 
 import { useEffect, useState } from "react";
-import InstagramIcon from "remixicon-react/InstagramLineIcon";
 import { RiTwitterXFill } from "react-icons/ri"
-import FacebookIcon from 'remixicon-react/FacebookFillIcon';
-import LikedinIcon from 'remixicon-react/LinkedinFillIcon';
+import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
+import InstagramLineIcon from "remixicon-react/InstagramLineIcon";
+import GitHubIcon from "remixicon-react/GithubFillIcon"
+
 import ArrowRight from "remixicon-react/ArrowRightUpLineIcon"
 import { Header } from "./Header";
 
@@ -48,11 +49,20 @@ export const Desk = ( ) => {
                     <div style={{
                         display: "flex"
                     }}>
+                        <div style={{
+                            // backgroundColor: "red"
+                            display: "flex",
+                            flexDirection: "row",
+                            flexWrap: "wrap",
+                            alignItems: "center",
+                            justifyContent: "center",
+                        }}>
                         <h1 className='main-h1'>YouTube by </h1>
                         <h1 className='main-h1' style={{
                             color: "#420097",
                             marginLeft: 14,
                         }}>Desk</h1>
+                        </div>
                     </div>
                     <div style={{
                         width: "100%",
@@ -101,14 +111,20 @@ export const Desk = ( ) => {
                                 color: "#ffffff",
                                 fontSize: 14
                             }}>v1.3.6+1720286592237</p>
+                        <div style={{
+                            width: "80%",
+                            // backgroundColor: "red"
+                        }}>
                             <p style={{
                                 color: "#ffffff",
                                 lineBreak: "auto",
                                 fontSize: 13,
-                                marginTop: 20
+                                marginTop: 20,
+                                textAlign: "center"
                             }}>
                             Desk will give you a chance to install and update our YouTube latest versions easier than before.
                             </p>
+                        </div>
                         </div>
                         <div>
 
@@ -122,25 +138,27 @@ export const Desk = ( ) => {
                     <div className='a-footer-social-links--container'>
                         <div className='a-footer-social-links'>
                             <a  className='social-link' 
-                                href="https://www.instagram.com/desktechnologies/" 
+                                href="https://github.com/wearedesk/" 
                                 target="_blank">
-                                <InstagramIcon className='social-icon' />
+                                <GitHubIcon size={20} className="header-icon"/>
                                 {/* <p className='social-p'>/desktechnologies</p> */}
                             </a>
-                            <div className='social-link'>
-                                <FacebookIcon className='social-icon' />
-                                {/* <p className='social-p'>/deskdevelopers</p> */}
-                            </div>
                             <a  className='social-link' 
-                                href="https://twitter.com/wearedesk" 
+                                href="https://x.com/wearedesk/" 
                                 target="_blank">
-                                <RiTwitterXFill className='social-icon' />
-                                {/* <p className='social-p'>/wearedesk</p> */}
+                                <RiTwitterXFill size={20} className="header-icon"/>
+                                {/* <p className='social-p'>/desktechnologies</p> */}
                             </a>
                             <a  className='social-link' 
-                                href="https://www.linkedin.com/company/desktechnologies/" 
+                                href="https://instagram.com/desktechnologies/" 
                                 target="_blank">
-                                <LikedinIcon className='social-icon' />
+                                <InstagramLineIcon size={20} className="header-icon"/>
+                                {/* <p className='social-p'>/desktechnologies</p> */}
+                            </a>
+                            <a  className='social-link' 
+                                href="https://linkedin.com/in/wearedesk/" 
+                                target="_blank">
+                                <LinkedinFillIcon size={20} className="header-icon"/>
                                 {/* <p className='social-p'>/desktechnologies</p> */}
                             </a>
                         </div>
