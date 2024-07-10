@@ -52,7 +52,7 @@ export const Desk = ( ) => {
             maxWidth: '100%',
             backgroundImage: `url(${Background})`,
             backgroundSize: "cover",
-            backgroundPosition: "top"
+            backgroundPosition: "center"
         }}>
             <Header Logo={ Logo }/>
 
@@ -61,7 +61,6 @@ export const Desk = ( ) => {
                 height: "100%",
                 display:"flex",
                 flexDirection: "column",
-                background: "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), 70%)"
             }}>
             <div className='desk-main--container'>
                 <div className='a-main-inner--container'>
