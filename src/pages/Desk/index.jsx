@@ -10,6 +10,7 @@ import { Header } from "./Header";
 
 import Logo from '../../../public/media/images/logos/desk-logo.png';
 import favicon from './images/favicon.png'
+import Background from "./images/backgrounds/background_dark.jpg"
 
 import "./index.css"
 
@@ -41,27 +42,49 @@ export const Desk = ( ) => {
     })
 
     return (
-        <div className="a-global--container">
+        <div 
+        style={{
+            backgroundColor: 'black',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            maxWidth: '100%',
+            backgroundImage: `url(${Background})`,
+            backgroundSize: "cover",
+            backgroundPosition: "top"
+        }}>
             <Header Logo={ Logo }/>
 
+            <div style={{
+                width: "100%",
+                height: "100%",
+                display:"flex",
+                flexDirection: "column",
+                background: "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), 70%)"
+            }}>
             <div className='desk-main--container'>
                 <div className='a-main-inner--container'>
                     <div style={{
-                        display: "flex"
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
                     }}>
                         <div style={{
-                            // backgroundColor: "red"
+                            width: "80%",
+                            // backgroundColor: "red",
                             display: "flex",
                             flexDirection: "row",
                             flexWrap: "wrap",
                             alignItems: "center",
                             justifyContent: "center",
                         }}>
-                        <h1 className='main-h1'>YouTube by </h1>
-                        <h1 className='main-h1' style={{
-                            color: "#420097",
-                            marginLeft: 14,
-                        }}>Desk</h1>
+                        <h1 style={{
+                            color: "#ffffff",
+                            textAlign: "center",
+                            fontWeight: "bolder",
+                            fontSize: 38
+                        }}>Get YouTube by Desk today and enjoy the videos and music you love</h1>
                         </div>
                     </div>
                     <div style={{
@@ -177,6 +200,7 @@ export const Desk = ( ) => {
                 </div>
                 </div>
             </footer>
+            </div>
         </div>
     )
 }
