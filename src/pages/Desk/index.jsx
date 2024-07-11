@@ -10,7 +10,8 @@ import { Header } from "./Header";
 
 import Logo from '../../../public/media/images/logos/desk-logo.png';
 import favicon from './images/favicon.png'
-import Background from "./images/backgrounds/background_dark.jpg"
+import Background from "./images/backgrounds/background_dark.jpg";
+import Banner from "./images/backgrounds/home-banner-dark.png";
 
 import "./index.css"
 
@@ -18,6 +19,7 @@ export const Desk = ( ) => {
     const fullPhrase = "Free. Friedly. Sponsor Block. ";
     const [ phrase, setPhrase ] = useState("");
     const [ count, setCount ] = useState();
+    const [ typingBar, setTypingBar ] = useState(false);
 
     useEffect(( ) => {
         setTimeout(( ) => {
@@ -25,6 +27,7 @@ export const Desk = ( ) => {
                 setTimeout(( ) => {
                     setPhrase( prev => prev += fullPhrase.at(count-1));
                     setCount( prev => prev +=1 );
+                    setTypingBar( prev => !prev);
                 }, 100);
             } else {
                 setPhrase("");
@@ -50,7 +53,7 @@ export const Desk = ( ) => {
             alignItems: 'center',
             justifyContent: 'space-between',
             maxWidth: '100%',
-            backgroundImage: `url(${Background})`,
+            // backgroundImage: `url(${Background})`,
             backgroundSize: "cover",
             backgroundPosition: "center"
         }}>
@@ -64,6 +67,7 @@ export const Desk = ( ) => {
             }}>
             <div className='desk-main--container'>
                 <div className='a-main-inner--container'>
+                    <img  src={ Banner } width={300} />
                     <div style={{
                         display: "flex",
                         alignItems: "center",
@@ -82,19 +86,24 @@ export const Desk = ( ) => {
                             color: "#ffffff",
                             textAlign: "center",
                             fontWeight: "bolder",
-                            fontSize: 38
+                            fontSize: 40
                         }}>Get YouTube by Desk today and enjoy the videos and music you love</h1>
                         </div>
                     </div>
                     <div style={{
                         width: "100%",
-                        height: 50,
+                        height: 40,
                         // backgroundColor: "red",
                         display: "flex",
+                        flexDirection: "row",
                         alignItems: "center",
                         justifyContent: "center"
                     }}>
-                        <h3 className='main-h3'>{ phrase }</h3>
+                        <h3 style={{
+                            color: "#ffffff",
+                            fontSize: 20,
+                        }}>{ phrase }</h3>
+                        <h3>{ typingBar ? "|" : " "}</h3>
                     </div>
                     <div className='main-bottom--container'>
                         <div style={{

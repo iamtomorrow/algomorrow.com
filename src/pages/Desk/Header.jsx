@@ -9,7 +9,7 @@ import TwitterFillIcon from "remixicon-react/TwitterFillIcon";
 
 export const Header = ( { Logo }) => {
     return (
-        <div className="header desk-header--container">
+        <div className="desk-header--container">
             <div className="desk-inner-header--container">
                 <div className='desk-logo logo--container'>
                     <img className='b-header-logo' id='desk-logo' src={ Logo } />
