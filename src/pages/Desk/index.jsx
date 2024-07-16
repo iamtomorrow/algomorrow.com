@@ -6,12 +6,17 @@ import InstagramLineIcon from "remixicon-react/InstagramLineIcon";
 import GitHubIcon from "remixicon-react/GithubFillIcon"
 
 import ArrowRight from "remixicon-react/ArrowRightUpLineIcon"
+import DownloadLineIcon from "remixicon-react/DownloadLineIcon"
 import { Header } from "./Header";
 
 import Logo from '../../../public/media/images/logos/desk-logo.png';
 import favicon from './images/favicon.png'
 import Background from "./images/backgrounds/background_dark.jpg";
 import Banner from "./images/backgrounds/home-banner-dark.png";
+import image1 from "./images/1_.jpg";
+import image2 from "./images/2_.jpg";
+import image3 from "./images/3_.jpg";
+import image4 from "./images/4_.jpg";
 
 import "./index.css"
 
@@ -86,8 +91,9 @@ export const Desk = ( ) => {
                             color: "#ffffff",
                             textAlign: "center",
                             fontWeight: "bolder",
-                            fontSize: 40
-                        }}>Get YouTube by Desk today and enjoy the videos and music you love</h1>
+                            fontSize: 44,
+                            letterSpacing: 1,
+                        }}>Get YouTube by Desk is under development but you can get it and helps by watching the videos you love.</h1>
                         </div>
                     </div>
                     <div style={{
@@ -118,10 +124,11 @@ export const Desk = ( ) => {
                         }}>
                             <a  
                             style={{
-                                backgroundColor: "black",
-                                height: 50,
-                                width: 240,
-                                borderRadius: 25,
+                                textDecoration: "none",
+                                backgroundColor: "rgba(256, 256, 256, 0.025)",
+                                height: 60,
+                                width: 280,
+                                borderRadius: 30,
                                 outline: 'none',
                                 border: "none",
                                 color: "#ffffff",
@@ -130,18 +137,27 @@ export const Desk = ( ) => {
                                 fontSize: 14,
                                 display: "flex",
                                 alignItems: "center",
-                                justifyContent: "center"
+                                justifyContent: "center",
+                                fontSize: 18,
+                                fontWeight: "lighter"
                             }}
                                 className='social-link' 
-                                href="https://api.expo.dev/v2/artifacts/eas/7zCotNzpcmGPpgvjuLyUJs" 
+                                href="https://expo.dev/artifacts/eas/tww7nomgpdd8VqbRahGkro.apk" 
                                 target="_blank">
-                                Download
-                                <ArrowRight color="#ffffff" size={20} />
+                                Download for free
+                                <DownloadLineIcon 
+                                    color="#ffffff" 
+                                    size={22} 
+                                    style={{
+                                        marginLeft: 10,
+                                    }}
+                                />
                             </a>
                             <p style={{
                                 color: "#ffffff",
-                                fontSize: 14
-                            }}>v1.3.6+1720286592237</p>
+                                fontSize: 16,
+                                textAlign: "center",
+                            }}>v1.13.11+1721084392097</p>
                         <div style={{
                             width: "80%",
                             // backgroundColor: "red"
@@ -149,7 +165,7 @@ export const Desk = ( ) => {
                             <p style={{
                                 color: "#ffffff",
                                 lineBreak: "auto",
-                                fontSize: 13,
+                                fontSize: 14,
                                 marginTop: 20,
                                 textAlign: "center"
                             }}>
@@ -159,6 +175,86 @@ export const Desk = ( ) => {
                         </div>
                         <div>
 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="main-section--container">
+                <div style={{
+                    width: "100%",
+                    height: "100%"
+                }}>
+                    <div style={{
+                        width: "100%",
+                        height: 120,
+                        // backgroundColor: "red",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "30"
+                    }}>
+                        <h1 style={{
+                            fontSize: 40,
+                            color: "#ffffff",
+                            marginBottom: 10,
+                            letterSpacing: 1,
+                            fontWeight: "600"
+                        }}>Features</h1>
+                        <p style={{
+                            fontSize: 20,
+                            color: "#ffffff",
+                            textAlign: "center",
+                        }}>
+                            This is a list of the main features found in the current version of YouTube by Desk.
+                        </p>
+                    </div>
+
+                    <div className="main-inner-section--container">
+                        <div className="box-main-inner-section--container">
+                            <div className="box-header-main-inner-section--container">
+                                <h1 className="box-header-h1-main-inner-section--container">Dark mode</h1>
+                                <p className="box-header-p-main-inner-section--container">Full metal dark</p>
+                            </div>
+
+                            <div className="box-center-main-inner-section--container">
+                                <img src={ image1 } height={"100%"} />
+                            </div>
+
+                            <p className="box-header-p-main-inner-section--container">
+                                Features the called Full Metal Dark mode to reduce battery and eye strain.
+                            </p>
+                        </div>
+
+                        <div className="box-main-inner-section--container">
+                            <div className="box-header-main-inner-section--container">
+                                <h1 className="box-header-h1-main-inner-section--container">Multi-language support</h1>
+                                <p className="box-header-p-main-inner-section--container">Three current available languages</p>
+                            </div>
+
+                            <div className="box-center-main-inner-section--container">
+                                <img src={ image3 } height={"100%"} />
+                            </div>
+
+                            <p className="box-header-p-main-inner-section--container">
+                                Currently YouTube by Desk has support for three main languages, English, Portuguese, and Chinese. Future versions will bring support for all YouTube support languages.
+                            </p>
+                        </div>
+
+                        <div className="box-main-inner-section--container">
+                            <div className="box-header-main-inner-section--container">
+                                <h1 className="box-header-h1-main-inner-section--container">New design</h1>
+                                <p className="box-header-p-main-inner-section--container">Redesigned app</p>
+                            </div>
+
+                            <div className="box-center-main-inner-section--container">
+                                <img src={ image4 } height={"100%"} />
+                            </div>
+
+                            <p className="box-header-p-main-inner-section--container">
+                                YouTube by Desk has a new design compared with the orignal YouTube app. It can be found in video cards, channel pages, tab bars and much more.
+                            </p>
                         </div>
                     </div>
                 </div>
