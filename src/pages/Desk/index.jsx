@@ -79,7 +79,7 @@ export const Desk = ( ) => {
                         justifyContent: "center",
                     }}>
                         <div style={{
-                            width: "80%",
+                            width: "100%",
                             // backgroundColor: "red",
                             display: "flex",
                             flexDirection: "row",
@@ -91,9 +91,9 @@ export const Desk = ( ) => {
                             color: "#ffffff",
                             textAlign: "center",
                             fontWeight: "bolder",
-                            fontSize: 44,
+                            fontSize: 52,
                             letterSpacing: 1,
-                        }}>Get YouTube by Desk is under development but you can get it and helps by watching the videos you love.</h1>
+                        }}>The YouTube Project</h1>
                         </div>
                     </div>
                     <div style={{
@@ -125,28 +125,28 @@ export const Desk = ( ) => {
                             <a  
                             style={{
                                 textDecoration: "none",
-                                backgroundColor: "rgba(256, 256, 256, 0.025)",
-                                height: 60,
-                                width: 280,
+                                color: "#000000",
+                                fontWeight: "bolder",
+                                backgroundColor: "rgba(256, 256, 256, 1)",
+                                height: 46,
+                                width: 240,
                                 borderRadius: 30,
                                 outline: 'none',
                                 border: "none",
-                                color: "#ffffff",
                                 marginBottom: 20,
                                 marginTop: 20,
                                 fontSize: 14,
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",
-                                fontSize: 18,
-                                fontWeight: "lighter"
+                                fontSize: 14,
                             }}
                                 className='social-link' 
                                 href="https://expo.dev/artifacts/eas/tww7nomgpdd8VqbRahGkro.apk" 
                                 target="_blank">
                                 Download for free
                                 <DownloadLineIcon 
-                                    color="#ffffff" 
+                                    color="#000" 
                                     size={22} 
                                     style={{
                                         marginLeft: 10,

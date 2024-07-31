@@ -15,6 +15,7 @@ import './index.css'
 import { Careers } from './pages/Desk/pages/Careers/Careers';
 import { Edge } from './pages/Desk/pages/Edge/Edge';
 import { DeskStore } from './pages/Desk/pages/DeskStore/DeskStore';
+import { Projects } from './pages/Desk/pages/Projects/Projects';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -32,6 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/Desk/contactus' element={ <ContactUs /> } />
         <Route path='/Desk/edge' element={ <Edge /> } />
         <Route path='/Desk/store' element={ <DeskStore /> } />
+        <Route path='/Desk/projects' element={ <Projects /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
