@@ -1,17 +1,19 @@
 
-import { DeskDevelopers } from '../src/pages/DeskDevelopers';
-import { Glaucia } from '../src/pages/Glaucia';
-import { Talisson } from './pages/Talisson';
-import { Desk } from './pages/Desk';
-
-import { Services } from './pages/Desk/pages/Services/Services';
-import { ContactUs } from './pages/Desk/pages/ContactUs/ContactUs';
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+
+import { DeskDevelopers } from '../src/pages/DeskDevelopers';
+import { Glaucia } from '../src/pages/Glaucia';
+import { Talisson } from './pages/Talisson';
+import { Desk } from './pages/Desk';
+import { Paleta } from './pages/Paleta/index.jsx'
+
+import { Services } from './pages/Desk/pages/Services/Services';
+import { ContactUs } from './pages/Desk/pages/ContactUs/ContactUs';
+
 import { Careers } from './pages/Desk/pages/Careers/Careers';
 import { Edge } from './pages/Desk/pages/Edge/Edge';
 import { DeskStore } from './pages/Desk/pages/DeskStore/DeskStore';
@@ -34,6 +36,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/Desk/edge' element={ <Edge /> } />
         <Route path='/Desk/store' element={ <DeskStore /> } />
         <Route path='/Desk/projects' element={ <Projects /> } />
+
+        {/* Paleta */}
+        <Route path='/Paleta' element={ <Paleta /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
