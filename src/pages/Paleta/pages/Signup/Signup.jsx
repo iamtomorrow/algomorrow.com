@@ -1,15 +1,24 @@
 
+import favicon from "../../images/favicon.png"
+
 import { Link } from "react-router-dom"
-import { TiArrowLeftOutline } from "react-icons/ti"
 import { IoArrowBackOutline, IoArrowForwardOutline, IoCloseOutline } from "react-icons/io5"
 
 import "./index.css"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { RiEyeLine } from "react-icons/ri"
 
 export const PaletaSignUp = ( ) => {
     const [ accessFormat, setAccessFormat ] = useState("enter");
     const [ hidePassword, setHidePassword ] = useState(true);
+
+    useEffect(( ) => {
+        document.title = "Paleta | Entrar";
+        let link = document.createElement('link');
+        link.rel = 'icon';
+        document.head.appendChild(link);
+        link.href = favicon;
+    })
 
     return (
         <div style={{

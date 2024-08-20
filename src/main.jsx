@@ -21,6 +21,8 @@ import { Projects } from './pages/Desk/pages/Projects/Projects';
 
 import { PaletaDownloads } from './pages/Paleta/pages/Downloads/Downloads.jsx'
 import { PaletaSignUp } from './pages/Paleta/pages/Signup/Signup.jsx'
+import { PaletaPlans } from './pages/Paleta/pages/Plans/Plans.jsx'
+import { AlgoSearch } from './pages/AlgoSearch/AlgoSearch.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -31,6 +33,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/Glaucia' element={ <Glaucia /> } />
         <Route path='/Desk' element={ <Desk /> } />
         <Route path='/talisson' element={ <Talisson /> } />
+
+        {/* Algo Search */}
+        <Route path='/search' element={ <AlgoSearch /> } />
 
         {/* Desk */}
         <Route path='/Desk/services' element={ <Services /> } />
@@ -44,6 +49,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/paleta' element={ <Paleta /> } />
         <Route path='/paleta/downloads' element={ <PaletaDownloads /> } />
         <Route path='/paleta/entrar' element={ <PaletaSignUp /> } />
+        <Route path='/paleta/planos' element={ <PaletaPlans /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

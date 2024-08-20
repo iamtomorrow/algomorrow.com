@@ -1,11 +1,22 @@
 
+import favicon from "../../images/favicon.png"
+
 import { Link } from "react-router-dom"
-import { RiAndroidLine } from "react-icons/ri"
+import { useEffect } from "react"
 import { Header } from "../../header"
 import "./index.css"
 import { IoArrowForwardOutline } from "react-icons/io5"
 
 export const PaletaDownloads = ( ) => {
+
+    useEffect(( ) => {
+        document.title = "Paleta | Downloads";
+        let link = document.createElement('link');
+        link.rel = 'icon';
+        document.head.appendChild(link);
+        link.href = favicon;
+    })
+
     return (
         <div style={{
             width: "100%",
