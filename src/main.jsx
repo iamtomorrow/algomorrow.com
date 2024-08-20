@@ -23,19 +23,22 @@ import { PaletaDownloads } from './pages/Paleta/pages/Downloads/Downloads.jsx'
 import { PaletaSignUp } from './pages/Paleta/pages/Signup/Signup.jsx'
 import { PaletaPlans } from './pages/Paleta/pages/Plans/Plans.jsx'
 import { AlgoSearch } from './pages/AlgoSearch/AlgoSearch.jsx'
+import { AlgoSearchAccount } from './pages/AlgoSearch/pages/Account/Account.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={ <AlgoSearch />} />
+
         <Route path='/developers' element={ <DeskDevelopers /> }/>
         {/* <Route path='/Glaucia' element={ <Glaucia /> } /> */}
         <Route path='/Desk' element={ <Desk /> } />
         <Route path='/talisson' element={ <Talisson /> } />
 
         {/* Algo Search */}
+        <Route path='/' element={ <AlgoSearch />} />
         <Route path='/search' element={ <AlgoSearch /> } />
+        <Route path='/account' element={ <AlgoSearchAccount />} />
 
         {/* Desk */}
         <Route path='/Desk/services' element={ <Services /> } />
