@@ -7,10 +7,28 @@ import { IoArrowBackOutline, IoArrowForwardOutline, IoCloseOutline } from "react
 import "./index.css"
 import { useState, useEffect } from "react"
 import { RiEyeLine } from "react-icons/ri"
+import { API } from "../../api/api"
 
 export const PaletaSignUp = ( ) => {
     const [ accessFormat, setAccessFormat ] = useState("enter");
     const [ hidePassword, setHidePassword ] = useState(true);
+
+    const [ email, setEmail ] = useState("");
+    const [ password, setPassword ] = useState("");
+    const [ name, setName ] = useState("");
+
+    const doLogin = async ( ) => {
+        if ( email !== "" && password !== "" ) {
+            await API.doLogin( email, password );
+        }
+    }
+
+    const register = async ( ) => {
+        console.log("s");
+        if ( name !== "" && email !== "" && password !== "" ) {
+            await API.register(name, email, password);
+        }
+    }
 
     useEffect(( ) => {
         document.title = "Paleta | Entrar";
@@ -71,6 +89,8 @@ export const PaletaSignUp = ( ) => {
                                 type="text"
                                 placeholder="Email"
                                 className="form-input"
+                                value={email}
+                                onChange={ (e) => setEmail(e.target.value) }
                             ></input>
                         </div>
                         <div className="form-input--container">
@@ -78,6 +98,8 @@ export const PaletaSignUp = ( ) => {
                                 type={`${ hidePassword ? "password" : "text"}`}
                                 placeholder="Senha"
                                 className="form-input"
+                                value={password}
+                                onChange={ (e) => setPassword(e.target.value) }
                             ></input>
                             <button 
                             onClick={ ( ) => setHidePassword(prev => !prev)}
@@ -106,7 +128,9 @@ export const PaletaSignUp = ( ) => {
                                 />
                             </button>
 
-                            <button className="form-expanded-button">
+                            <button 
+                            onClick={ doLogin }
+                            className="form-expanded-button">
                                 <p style={{
                                     marginRight: 6,
                                     fontSize: 16
@@ -124,6 +148,8 @@ export const PaletaSignUp = ( ) => {
                                 type="text"
                                 placeholder="Nome"
                                 className="form-input"
+                                value={name}
+                                onChange={ (e) => setName(e.target.value) }
                             ></input>
                         </div>
                         <div className="form-input--container">
@@ -131,6 +157,8 @@ export const PaletaSignUp = ( ) => {
                                 type="text"
                                 placeholder="Email"
                                 className="form-input"
+                                value={email}
+                                onChange={ (e) => setEmail(e.target.value) }
                             ></input>
                         </div>
                         <div className="form-input--container">
@@ -138,6 +166,8 @@ export const PaletaSignUp = ( ) => {
                                 type={`${ hidePassword ? "password" : "text"}`}
                                 placeholder="Senha"
                                 className="form-input"
+                                value={password}
+                                onChange={ (e) => setPassword(e.target.value) }
                             ></input>
                             <button 
                             onClick={ ( ) => setHidePassword(prev => !prev)}
@@ -166,7 +196,9 @@ export const PaletaSignUp = ( ) => {
                                 />
                             </button>
 
-                            <button className="form-expanded-button">
+                            <button 
+                            onClick={ register }
+                            className="form-expanded-button">
                                 <p style={{
                                     marginRight: 6,
                                     fontSize: 16

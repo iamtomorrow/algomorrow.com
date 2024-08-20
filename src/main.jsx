@@ -28,9 +28,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={ <App />} />
+        <Route path='/' element={ <AlgoSearch />} />
         <Route path='/developers' element={ <DeskDevelopers /> }/>
-        <Route path='/Glaucia' element={ <Glaucia /> } />
+        {/* <Route path='/Glaucia' element={ <Glaucia /> } /> */}
         <Route path='/Desk' element={ <Desk /> } />
         <Route path='/talisson' element={ <Talisson /> } />
 

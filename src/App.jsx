@@ -1,17 +1,13 @@
 
 import DeskLogo from '../public/media/images/logos/desk-logo.png';
-import GlauciaLogo from '../public/media/images/logos/glaucia-logo.png';
 import UnderSorrowLogo from '../public/media/images/logos/under-sorrow-logo.png';
 import Logo from '../public/media/images/logos/logo.png';
 
 import { Link } from 'react-router-dom';
-import { useState } from 'react'
 import './App.css'
 import { Footer } from './Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className='a-global--container'>
       <header className='header--container'>

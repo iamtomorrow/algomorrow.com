@@ -27,6 +27,7 @@ export const AlgoSearch = ( ) => {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
+            padding: 20,
         }}>
             <img 
                 src={ favicon } 
@@ -35,9 +36,11 @@ export const AlgoSearch = ( ) => {
                     width: "100px"
                 }}
             />
-            <h1>Algo Search Engine is comming!</h1>
+            <h1 style={{
+                textAlign: "center"
+            }}>Algo Search Engine is comming!</h1>
 
-            <footer className="footer">
+            <footer className="algo-footer">
                 <Link 
                 className="footer-link"
                 to={{ pathname: "https://www.instagram.com/algosearch/" }}
