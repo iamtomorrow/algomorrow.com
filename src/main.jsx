@@ -19,6 +19,9 @@ import { Edge } from './pages/Desk/pages/Edge/Edge';
 import { DeskStore } from './pages/Desk/pages/DeskStore/DeskStore';
 import { Projects } from './pages/Desk/pages/Projects/Projects';
 
+import { PaletaDownloads } from './pages/Paleta/pages/Downloads/Downloads.jsx'
+import { PaletaSignUp } from './pages/Paleta/pages/Signup/Signup.jsx'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
@@ -38,7 +41,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/Desk/projects' element={ <Projects /> } />
 
         {/* Paleta */}
-        <Route path='/Paleta' element={ <Paleta /> } />
+        <Route path='/paleta' element={ <Paleta /> } />
+        <Route path='/paleta/downloads' element={ <PaletaDownloads /> } />
+        <Route path='/paleta/entrar' element={ <PaletaSignUp /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -1,0 +1,135 @@
+
+button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+input {
+    font-size: 16px;
+}
+
+.signup-header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.back-link {
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000000;
+    transition: all .5s ease;
+    font-weight: 600;
+    border: 1px solid #000000;
+}
+
+.signup-card--container {
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    width: 40%;
+    height: auto;
+}
+
+.signup-card-header--container {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-header-option {
+    cursor: pointer;
+    width: 40%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: all .5s ease;
+    border-bottom: 2px solid transparent;
+}
+.card-header-option--active {
+    border-bottom: 2px solid #000000;
+}
+.card-header-option:hover {
+    /* opacity: 0.2; */
+    transition: all .5s ease;
+}
+.card-header-option-p {
+    font-weight: 600;
+}
+
+.signup-form--container {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.form-input--container {
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.025);
+}
+.form-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.form-buttons--container {
+    margin-top: 30px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ .form-expanded-button {
+    color: #ffffff;
+    background-color: #000000;
+    margin-left: 6px;
+    width: 160px;
+    height: 44px;
+    border-radius: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+.form-button {
+    margin-right: 6px;
+    border: none;
+    outline: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 18px;
+}
+
+@media screen and (max-width: 800px) {
+    .signup-card--container {
+        width: 70%;
+    }
+}
