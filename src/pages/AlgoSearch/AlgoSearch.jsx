@@ -1,15 +1,19 @@
 
-import { FaXTwitter } from "react-icons/fa6";
-import InstagramLineIcon from "remixicon-react/InstagramLineIcon";
-
 import favicon from "./images/favicon.png"
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import Logo from "./images/algo-logo.png"
+
+import { useEffect, useState } from "react";
+
 import "./index.css"
-import GithubFillIcon from "remixicon-react/GithubFillIcon";
-import LinkedinFillIcon from "remixicon-react/LinkedinFillIcon";
+import { AlgoSearchFooter } from "./Footer/Footer";
+import { IoCloseOutline, IoSearchOutline } from "react-icons/io5";
 
 export const AlgoSearch = ( ) => {
+    const [ query, setQuery ] = useState("");
+
+    const getSearchResults = async ( ) => {
+        console.log( query );
+    }
 
     useEffect(( ) => {
         document.title = "Algo";
@@ -26,10 +30,9 @@ export const AlgoSearch = ( ) => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "center",
-            padding: 20,
+            justifyContent: "space-between",
         }}>
-            <img 
+            {/* <img 
                 src={ favicon } 
                 alt="favicon"
                 style={{
@@ -38,46 +41,72 @@ export const AlgoSearch = ( ) => {
             />
             <h1 style={{
                 textAlign: "center"
-            }}>Algo Search Engine is comming!</h1>
+            }}>Algo Search Engine is comming!</h1> */}
+            <header style={{
+                width: "100%",
+                height: 200
+            }}>
 
-            <footer className="algo-footer">
-                <Link 
-                className="footer-link"
-                to={{ pathname: "https://www.instagram.com/algosearch/" }}
-                target="_blank">
-                    <InstagramLineIcon 
-                        size={30}
-                        color="#000000"
-                    />
-                </Link>
-                <Link 
-                className="footer-link"
-                to={"https://www.x.com/algosearch/"}
-                target="_blank">
-                    <FaXTwitter 
-                        size={30}
-                        color="#000000"
-                    />
-                </Link>
-                <Link 
-                className="footer-link"
-                to={{ pathname: "https://www.github.com/iamtomorrow/" }}
-                target="_blank">
-                    <GithubFillIcon 
-                        size={30}
-                        color="#000000"
-                    />
-                </Link>
-                <Link 
-                className="footer-link"
-                to={{ pathname: "https://www.linkedin.com/wearedesk" }}
-                target="_blank">
-                    <LinkedinFillIcon 
-                        size={30}
-                        color="#000000"
-                    />
-                </Link>
-            </footer>
+            </header>
+
+            <section className="search-bar-section">
+                <div className="search-bar-logo--container">
+                    <img className="search-bar-logo" src={ Logo } />
+                </div>
+
+                <form className="search-bar-form--container">
+                    <div className="search-bar-input--container">
+                        {
+                            query !== "" &&
+                            <IoSearchOutline
+                                size={24}
+                                color="#000000"
+                            />
+                        }
+                        <input 
+                            placeholder="Search the Web"
+                            className="search-bar-input"
+                            value={query}
+                            onChange={ (e) => setQuery(e.target.value)}
+                        />
+                    </div>
+                    <div className="search-bar-button--container">
+                    {
+                            query !== "" &&
+                            <button className="close-button">
+                                <IoCloseOutline 
+                                    size={24}
+                                    color="#000000"
+                                />
+                            </button>
+                        }
+                        <button className="search-button">
+                            <IoSearchOutline
+                                size={22}
+                            />
+                        </button>
+                    </div>
+                </form>
+                <div className="search-categories-bar--container">
+                    <button className="search-category-button">
+                        All
+                    </button>
+                    <button className="search-category-button">
+                        Images
+                    </button>
+                    <button className="search-category-button">
+                        Videos
+                    </button>
+                    <button className="search-category-button">
+                        News
+                    </button>
+                    <button className="search-category-button">
+                        Shopping
+                    </button>
+                </div>
+            </section>
+
+            <AlgoSearchFooter restricted={false} />
         </div>
     )
 }
