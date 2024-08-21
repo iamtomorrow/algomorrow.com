@@ -28,9 +28,12 @@ import { AlgoSearchSettings } from './pages/AlgoSearch/pages/Settings/Settings.j
 import { PaletaAppSearch } from './pages/Paleta/pages/App/pages/Search/Search.jsx'
 import { PaletaAppFavorites } from './pages/Paleta/pages/App/pages/Favorites/Favorites.jsx'
 import { PaletaAppAccount } from './pages/Paleta/pages/App/pages/Account/Account.jsx'
+import { AlgoSearchSearch } from './pages/AlgoSearch/pages/Search/Search.jsx'
+import { SearchContextProvider } from './pages/AlgoSearch/contexts/SearchContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <SearchContextProvider>
     <BrowserRouter>
       <Routes>
 
@@ -39,11 +42,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/Desk' element={ <Desk /> } />
         <Route path='/talisson' element={ <Talisson /> } />
 
-        {/* Algo Search */}
-        <Route path='/' element={ <AlgoSearch />} />
-        <Route path='/search' element={ <AlgoSearch /> } />
-        <Route path='/account' element={ <AlgoSearchAccount />} />
-        <Route path='/settings' element={ <AlgoSearchSettings />} />
+          {/* Algo Search */}
+          <Route path='/' element={ <AlgoSearch />} />
+          <Route path='/search' element={ <AlgoSearchSearch /> } />
+          <Route path='/account' element={ <AlgoSearchAccount />} />
+          <Route path='/settings' element={ <AlgoSearchSettings />} />
 
         {/* Desk */}
         <Route path='/Desk/services' element={ <Services /> } />
@@ -63,5 +66,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/paleta/account' element={ <PaletaAppAccount /> } />
       </Routes>
     </BrowserRouter>
+    </SearchContextProvider>
   </React.StrictMode>
 )

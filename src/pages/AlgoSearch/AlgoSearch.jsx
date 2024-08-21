@@ -2,19 +2,30 @@
 import favicon from "./images/favicon.png"
 import Logo from "./images/algo-logo.png"
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import "./index.css"
 import { AlgoSearchFooter } from "./Footer/Footer";
-import { IoCloseOutline, IoSearchOutline, IoSettingsOutline } from "react-icons/io5";
+import { IoArrowForwardOutline, IoCloseOutline, IoSearchOutline, IoSettingsOutline } from "react-icons/io5";
 import { RiSettings3Line } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { SearchContext } from "./contexts/SearchContext";
 
 export const AlgoSearch = ( ) => {
+    const nav = useNavigate( );
     const [ query, setQuery ] = useState("");
+
+    const SearchContxt = useContext( SearchContext );
 
     const getSearchResults = async ( ) => {
         console.log( query );
+    }
+
+    const navigate = ( route ) => {
+        if ( query.length ) {
+            nav(`${route}?q=${query}`);
+            SearchContxt.updateQuery(query);
+        }
     }
 
     useEffect(( ) => {
@@ -65,17 +76,15 @@ export const AlgoSearch = ( ) => {
                     <img className="search-bar-logo" src={ Logo } />
                 </div>
 
-                <form className="search-bar-form--container">
+                <form 
+                className="search-bar-form--container">
                     <div className="search-bar-input--container">
-                        {
-                            query !== "" &&
-                            <button className="search-left-button">
-                                <IoSearchOutline
-                                    size={24}
-                                    color="#000000"
-                                />
-                            </button>
-                        }
+                        <button className="search-left-button">
+                            <IoSearchOutline
+                                size={24}
+                                color="#000000"
+                            />
+                        </button>
                         <input 
                             
                             placeholder="Search the Web"
@@ -94,8 +103,13 @@ export const AlgoSearch = ( ) => {
                                 />
                             </button>
                         }
-                        <button className="search-button">
-                            <IoSearchOutline
+                        <button 
+                        onClick={ (e) => { 
+                            e.preventDefault(); 
+                            navigate("/search")} 
+                        }
+                        className="search-button">
+                            <IoArrowForwardOutline
                                 size={22}
                             />
                         </button>

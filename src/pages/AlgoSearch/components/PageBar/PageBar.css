@@ -1,0 +1,88 @@
+
+.page-bar--container {
+    width: 50%;
+    min-height: 100px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 26px;
+    transition: all .25s ease;
+}
+.page-bar--container:hover {
+    opacity: 0.8;
+    transition: all .25s ease;
+}
+
+.page-bar-header--container {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.page-bar-favicon--container {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 6px;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-bar-favicon {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.page-bar-info--container {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-left: 10px;
+}
+.page-bar-info-title {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.7);
+}
+.page-bar-info-url {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.page-bar-body--container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 10px;
+}
+.page-bar-info-link {
+    text-decoration: none;
+
+    font-size: 18px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.page-bar-info-description {
+    margin-top: 4px;
+    text-align: left;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (max-width: 800px)  {
+    .page-bar--container {
+        width: 100%;
+    }
+}
