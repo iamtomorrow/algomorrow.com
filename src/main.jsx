@@ -25,6 +25,9 @@ import { PaletaPlans } from './pages/Paleta/pages/Plans/Plans.jsx'
 import { AlgoSearch } from './pages/AlgoSearch/AlgoSearch.jsx'
 import { AlgoSearchAccount } from './pages/AlgoSearch/pages/Account/Account.jsx'
 import { AlgoSearchSettings } from './pages/AlgoSearch/pages/Settings/Settings.jsx'
+import { PaletaAppSearch } from './pages/Paleta/pages/App/pages/Search/Search.jsx'
+import { PaletaAppFavorites } from './pages/Paleta/pages/App/pages/Favorites/Favorites.jsx'
+import { PaletaAppAccount } from './pages/Paleta/pages/App/pages/Account/Account.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -55,6 +58,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/paleta/downloads' element={ <PaletaDownloads /> } />
         <Route path='/paleta/entrar' element={ <PaletaSignUp /> } />
         <Route path='/paleta/planos' element={ <PaletaPlans /> } />
+        <Route path='/paleta/search' element={ <PaletaAppSearch />}/>
+        <Route path='/paleta/favorites' element={ <PaletaAppFavorites /> } />
+        <Route path='/paleta/account' element={ <PaletaAppAccount /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
