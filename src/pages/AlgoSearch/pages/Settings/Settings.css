@@ -1,0 +1,102 @@
+
+.algosearch-settings-header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.025);
+}
+
+.algosearch-settings-main-container {
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.algosearch-settings-main-container-card {
+    width: 80%;
+    height: auto;
+    border-radius: 30px;
+    padding: 20px;
+}
+.algosearch-settings-main-container-card-header {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.algosearch-settings-main-container-card-header-title {
+    font-size: 14px;
+}
+.algosearch-settings-main-container-card-option {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.025);
+}
+.algosearch-settings-main-container-card-option-icon--container {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.algosearch-settings-main-container-card-option-side--container {
+    margin-left: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.algosearch-settings-main-container-card-option-side--container-title {
+    font-size: 16px;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+.algosearch-settings-main-container-card-option-side--container-description {
+    font-size: 12px;
+}
+.algosearch-settings-main-container-card-option-select--container {
+    width: 180px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+}
+.algosearch-settings-main-container-card-option-select {
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    padding: 4px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+}
+
+@media only screen and (max-width: 800px)  {
+    .algosearch-settings-main-container {
+        padding: 2px;
+    }
+    .algosearch-settings-main-container-card {
+        width: 100%;
+    }
+}

@@ -24,6 +24,7 @@ import { PaletaSignUp } from './pages/Paleta/pages/Signup/Signup.jsx'
 import { PaletaPlans } from './pages/Paleta/pages/Plans/Plans.jsx'
 import { AlgoSearch } from './pages/AlgoSearch/AlgoSearch.jsx'
 import { AlgoSearchAccount } from './pages/AlgoSearch/pages/Account/Account.jsx'
+import { AlgoSearchSettings } from './pages/AlgoSearch/pages/Settings/Settings.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -39,6 +40,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/' element={ <AlgoSearch />} />
         <Route path='/search' element={ <AlgoSearch /> } />
         <Route path='/account' element={ <AlgoSearchAccount />} />
+        <Route path='/settings' element={ <AlgoSearchSettings />} />
 
         {/* Desk */}
         <Route path='/Desk/services' element={ <Services /> } />

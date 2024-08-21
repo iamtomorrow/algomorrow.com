@@ -67,7 +67,7 @@ export const AlgoSearchFooter = ({ restricted }) => {
                 <a className="footer-inner-a">Settings</a>
             </div>
             <div className="footer-copyright-section">
-                <p>&#169; 2024 Algomorrow Group. All right reserved.</p>
+                <p>&#169; 2024 Algomorrow Group. All rights reserved.</p>
             </div>
         </footer>
     )

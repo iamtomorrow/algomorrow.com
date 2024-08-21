@@ -6,7 +6,9 @@ import { useEffect, useState } from "react";
 
 import "./index.css"
 import { AlgoSearchFooter } from "./Footer/Footer";
-import { IoCloseOutline, IoSearchOutline } from "react-icons/io5";
+import { IoCloseOutline, IoSearchOutline, IoSettingsOutline } from "react-icons/io5";
+import { RiSettings3Line } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 export const AlgoSearch = ( ) => {
     const [ query, setQuery ] = useState("");
@@ -44,9 +46,18 @@ export const AlgoSearch = ( ) => {
             }}>Algo Search Engine is comming!</h1> */}
             <header style={{
                 width: "100%",
-                height: 200
+                height: 100,
+                padding: 10,
+                alignItems: "center",
+                display: "flex"
             }}>
-
+                <Link 
+                to={"/settings"}
+                className="settings-link">
+                    <RiSettings3Line
+                        size={20}
+                    />
+                </Link>
             </header>
 
             <section className="search-bar-section">
@@ -58,22 +69,25 @@ export const AlgoSearch = ( ) => {
                     <div className="search-bar-input--container">
                         {
                             query !== "" &&
-                            <IoSearchOutline
-                                size={24}
-                                color="#000000"
-                            />
+                            <button className="search-left-button">
+                                <IoSearchOutline
+                                    size={24}
+                                    color="#000000"
+                                />
+                            </button>
                         }
                         <input 
+                            
                             placeholder="Search the Web"
                             className="search-bar-input"
                             value={query}
                             onChange={ (e) => setQuery(e.target.value)}
                         />
-                    </div>
-                    <div className="search-bar-button--container">
-                    {
+                        {
                             query !== "" &&
-                            <button className="close-button">
+                            <button 
+                            onClick={ ( ) => setQuery("") }
+                            className="close-button">
                                 <IoCloseOutline 
                                     size={24}
                                     color="#000000"
@@ -106,7 +120,7 @@ export const AlgoSearch = ( ) => {
                 </div>
             </section>
 
-            <AlgoSearchFooter restricted={false} />
+            <AlgoSearchFooter restricted={true} />
         </div>
     )
 }

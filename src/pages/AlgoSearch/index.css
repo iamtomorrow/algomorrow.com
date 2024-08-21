@@ -1,15 +1,29 @@
 
+button, a {
+    cursor: pointer;
+    transition: all .25s ease;
+}
+button:hover, a:hover {
+    opacity: 0.25;
+    transition: all .5s ease;
+}
+::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
 .search-bar-section {
     width: 100%;
     height: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .search-bar-logo--container {
     width: 100%;
-    height: 10%;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,8 +33,8 @@
 }
 
 .search-bar-form--container {
-    width: 80%;
-    height: 30%;
+    width: 40%;
+    height: 20%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,20 +42,19 @@
 }
 .search-bar-input--container {
     padding-left: 20px;
-    padding-right: 20px;
-    flex: 1;
-    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 50px;
+    justify-content: space-between;
+    height: 56px;
     border-radius: 20px;
     box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.025);
     background-color: #ffffff;
+    border: 2px solid rgba(0, 0, 0, 0.05);
 }
 .search-bar-button--container {
     padding: 6px;
-    min-width: 120px;
+    min-width: 60px;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -50,22 +63,32 @@
 .search-bar-input {
     padding: 10px;
     padding-left: 20px;
-    flex: 1;
+    width: 100%;
     height: 100%;
     font-size: 16px;
 }
 
-.close-button {
+.search-left-button {
     width: 40px;
     height: 40px;
     border-radius: 20px;
     color: #000000;
+    background-color: #ffffff;    
+}
+
+.close-button {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    color: #000000;
     background-color: #ffffff;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .search-button {
-    width: 40px;
-    height: 40px;
+    min-width: 60px;
+    height: 56px;
     border-radius: 20px;
     color: #ffffff;
     background-color: #000000;
@@ -74,7 +97,7 @@
 .search-categories-bar--container { 
     width: 80%;
     height: 60px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -85,4 +108,21 @@
     padding-left: 20px;
     padding-right: 20px;
     height: 36px;
+}
+
+.settings-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 25%;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .search-bar-form--container {
+        width: 86%;
+    }
 }

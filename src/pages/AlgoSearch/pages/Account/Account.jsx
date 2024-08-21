@@ -21,11 +21,11 @@ export const AlgoSearchAccount = ( ) => {
     return (
         <div style={{
             width: "100%",
-            height: "100%",
+            minHeight: "100%",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "space-between"
+            justifyContent: "space-between",
         }}>
             <Header restricted={true} />
 
@@ -166,10 +166,14 @@ export const AlgoSearchAccount = ( ) => {
             : <div style={{
                 width: "60%",
                 height: "auto",
+                paddingTop: 40,
+                paddingBottom: 20,
+                borderRadius: 30,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
+                backgroundColor: "rgba(0, 0, 0, 0.025)"
             }}>
                 <p style={{
                     fontSize: 26,
