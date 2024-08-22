@@ -1,13 +1,20 @@
 
 .paleta-app-header {
     width: 100%;
-    height: 60px;
-    /* 
-    background-color: rebeccapurple; */
+    height: 80px;
+    /* background-color: rebeccapurple;  */
     display: flex;
+    padding: 10px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+.paleta-app-header-logo--container {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-logo {

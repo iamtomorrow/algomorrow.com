@@ -1,0 +1,12 @@
+
+.mainbar--container {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    /* background-color: forestgreen; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+}

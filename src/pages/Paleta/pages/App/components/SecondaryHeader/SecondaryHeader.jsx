@@ -17,7 +17,7 @@ export const SecondaryHeader = ( ) => {
                 onClick={ ( ) => navigate("/paleta/")}
                 className="paleta-app-secondary-header-back-button">
                     <IoArrowBackOutline />
-                    <p>Back</p>
+                    <p>Voltar</p>
                 </button>
             </div>
         </header>

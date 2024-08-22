@@ -38,6 +38,12 @@ export const AlgoSearchSearch = ( ) => {
         link.href = favicon;
     })
 
+    useEffect(( ) => {
+        if ( query === "" ) {
+            nav("/")
+        }
+    }, [ ]);
+
     return (
         <div className="algosearch-search--page">
             <div className="algosearch-search--page-header--container">

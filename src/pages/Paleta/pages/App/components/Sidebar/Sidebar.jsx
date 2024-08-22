@@ -15,19 +15,19 @@ export const Sidebar = ( ) => {
 
                 <SidebarButton 
                     icon={ <RiSearchLine className="paleta-app-sidebar-button-icon"/> }
-                    title={"Search"}
+                    title={"Pesquisar"}
                     path={"/paleta/search"}
                 />
 
                 <SidebarButton 
                     icon={ <RiHeartLine className="paleta-app-sidebar-button-icon"/> }
-                    title={"Favorites"}
+                    title={"Favoritos"}
                     path={"/paleta/favorites"}
                 />
 
                 <SidebarButton 
                     icon={ <RiUser3Line className="paleta-app-sidebar-button-icon"/> }
-                    title={"You"}
+                    title={"Você"}
                     path={"/paleta/account"}
                 />
             </div>

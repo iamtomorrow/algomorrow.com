@@ -1,8 +1,11 @@
 
 .paleta-app-secondary-header--container {
     width: 100%;
-    height: 100%;
+    height: 80px;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .paleta-app-secondary-header-back-button {
