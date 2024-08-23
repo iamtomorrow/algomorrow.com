@@ -62,7 +62,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/Desk/projects' element={ <Projects /> } />
 
         {/* Paleta */}
-        <Route path='/paleta' element={ <Navigate to={"/dist/index.html"} />} />
+        <Route path='/paleta' element={ <Navigate to={"/public/dist/index.html"} />} />
         <Route path='/paleta/downloads' element={ <PaletaDownloads /> } />
         <Route path='/paleta/entrar' element={ <PaletaSignUp /> } />
         <Route path='/paleta/planos' element={ <PaletaPlans /> } />

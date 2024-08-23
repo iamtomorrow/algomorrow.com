@@ -7,13 +7,14 @@ import { useContext, useEffect, useState } from "react";
 import "./index.css"
 import { AlgoSearchFooter } from "./Footer/Footer";
 import { IoArrowForwardOutline, IoCloseOutline, IoSearchOutline, IoSettingsOutline } from "react-icons/io5";
-import { RiSettings3Line } from "react-icons/ri";
+import { RiSearchLine, RiSettings3Line } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
 import { SearchContext } from "./contexts/SearchContext";
 
 export const AlgoSearch = ( ) => {
     const nav = useNavigate( );
     const [ query, setQuery ] = useState("");
+    const [ isOnFocus, setIsOnFocus ] = useState(false);
 
     const SearchContxt = useContext( SearchContext );
 
@@ -85,22 +86,50 @@ export const AlgoSearch = ( ) => {
                                 color="#000000"
                             />
                         </button>
-                        <input 
-                            
-                            placeholder="Search the Web"
-                            className="search-bar-input"
-                            value={query}
-                            onChange={ (e) => setQuery(e.target.value)}
-                        />
+                        <div className="search-bar-input">
+                            <input 
+                                style={{
+                                    width: "100%",
+                                    height: "100%",
+                                    zIndex: 2,
+                                    // backgroundColor: "red"
+                                }}
+                                placeholder=""
+                                value={query}
+                                onChange={ (e) => setQuery(e.target.value)}
+                                onFocus={ ( ) => setIsOnFocus( prev => true ) }
+                                onBlur={ ( ) => setIsOnFocus( prev => query !== "" ? true : false) }
+                            />
+                            <p 
+                            className="search-bar-input-placeholder"
+                            style={{
+                                fontSize: isOnFocus ? 10 : 14,
+                                marginBottom: isOnFocus ? 46 : 0,
+                                paddingRight: 10,
+                                paddingLeft: isOnFocus ? 10 : 0,
+                                height: 30,
+                                backgroundColor: "#ffffff",
+                                display: "flex",
+                                alignItems: "center",
+                                color: "rgba(0, 0, 0, 0.6)",
+                                position: "absolute",
+                            }}>Search the Web</p>
+                        </div>
                         {
-                            query !== "" &&
-                            <button 
-                            onClick={ ( ) => setQuery("") }
+                            query !== "" 
+                            ? <button 
+                            onClick={ ( ) => { 
+                                setQuery("");
+                                setIsOnFocus( prev => false );
+                            }}
                             className="close-button">
                                 <IoCloseOutline 
                                     size={24}
                                     color="#000000"
                                 />
+                            </button>
+                            : <button 
+                                className="close-button">
                             </button>
                         }
                         <button 
@@ -109,8 +138,11 @@ export const AlgoSearch = ( ) => {
                             navigate("/search")} 
                         }
                         className="search-button">
-                            <IoArrowForwardOutline
+                            {/* <IoArrowForwardOutline
                                 size={22}
+                            /> */}
+                            <RiSearchLine
+                                size={18}
                             />
                         </button>
                     </div>
