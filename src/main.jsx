@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes, redirect } from 'react-router-dom'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
@@ -39,7 +39,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <LibraryContextProvider>
     <SearchContextProvider>
-      
     <BrowserRouter>
       <Routes>
 
@@ -63,7 +62,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/Desk/projects' element={ <Projects /> } />
 
         {/* Paleta */}
-        <Route path='/paleta' element={ <Paleta /> } />
+        <Route path='/paleta' element={ <Navigate to={"/dist/index.html"} />} />
         <Route path='/paleta/downloads' element={ <PaletaDownloads /> } />
         <Route path='/paleta/entrar' element={ <PaletaSignUp /> } />
         <Route path='/paleta/planos' element={ <PaletaPlans /> } />
