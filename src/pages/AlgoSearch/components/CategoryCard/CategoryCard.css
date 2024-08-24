@@ -9,8 +9,10 @@
     margin-left: 4px;
     margin-right: 4px;
     cursor: pointer;
+    transition: all .25s ease;
 }
 .category-card-title {
     font-size: 12px;
     color: #000000;
+    transition: all .25s ease;
 }

@@ -24,8 +24,9 @@ export const AlgoSearch = ( ) => {
 
     const navigate = ( route ) => {
         if ( query.length ) {
-            nav(`${route}?q=${query}`);
             SearchContxt.updateQuery(query);
+            SearchContxt.updateCategory("Images");
+            nav(`${ route }?q=${ query }&category=${ SearchContxt.searchCategory }`);
         }
     }
 
@@ -147,6 +148,7 @@ export const AlgoSearch = ( ) => {
                         </button>
                     </div>
                 </form>
+
                 <div className="search-categories-bar--container">
                     <button className="search-category-button">
                         All
