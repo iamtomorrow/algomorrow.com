@@ -43,7 +43,6 @@ button:hover, a:hover {
 }
 .search-bar-input--container {
   padding-left: 10px;
-  padding-right: 10px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -95,10 +94,9 @@ button:hover, a:hover {
 }
 
 .search-button {
-  height: 36px;
+  height: 100%;
   width: 46px;
   border-radius: 20px;
-  
   display: flex;
   align-items: center;
   justify-content: center;

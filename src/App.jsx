@@ -50,7 +50,7 @@ const App = ( ) => {
             alignItems: "center",
             justifyContent: "space-between",
         }}>
-            <AlgoSearchHeader />
+            {/* <AlgoSearchHeader /> */}
 
             <section className="search-bar-section">
                 <div className="search-bar-logo--container">
@@ -74,26 +74,12 @@ const App = ( ) => {
                                     zIndex: 2,
                                     // backgroundColor: "red"
                                 }}
-                                placeholder=""
+                                placeholder="Search the Web"
                                 value={query}
                                 onChange={ (e) => setQuery(e.target.value)}
                                 onFocus={ ( ) => setIsOnFocus( prev => true ) }
                                 onBlur={ ( ) => setIsOnFocus( prev => query !== "" ? true : false) }
                             />
-                            <p 
-                            className="search-bar-input-placeholder"
-                            style={{
-                                display: "flex",
-                                fontSize: isOnFocus ? 0 : 14,
-                                marginBottom: isOnFocus ? 46 : 0,
-                                paddingRight: 10,
-                                paddingLeft: isOnFocus ? 10 : 0,
-                                height: 30,
-                                backgroundColor: "rgba(0, 0, 0, 0)",
-                                alignItems: "center",
-                                color: "rgba(0, 0, 0, 0.6)",
-                                position: "absolute",
-                            }}>Search the Web</p>
                         </div>
                         {
                             query !== "" 
@@ -120,9 +106,9 @@ const App = ( ) => {
                         }
                         className="search-button"
                         style={{
-                          width: query !== "" ? 100 : 46,
-                          paddingLeft: query !== "" ? 20 : 0,
-                          paddingRight: query !== "" ? 20 : 0,
+                          width: query !== "" ? 100 : 60,
+                          paddingLeft: query !== "" ? 20 : 20,
+                          paddingRight: query !== "" ? 20 : 20,
                         }}>
                             <p 
                               className="search-button-p"

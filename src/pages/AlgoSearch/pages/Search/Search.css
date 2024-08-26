@@ -87,7 +87,7 @@
 }
 
 .algosearch-search--page-center-col {
-    width: 84%;
+    width: 86%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -117,11 +117,10 @@
         width: 100%;
     }
     .search-bar-form--container {
-        width: 100%;
         height: 50%;
         padding: 0;
     }
-    .search-bar-input--container {
-        height: 44px;
+    .algosearch-search--page-center-col {
+        width: 96%;
     }
 }
