@@ -5,10 +5,10 @@ import favicon from '../../images/favicon.png'
 
 import { useContext, useState, useEffect } from "react"
 import { SearchContext } from "../../contexts/SearchContext"
-import { IoArrowForwardOutline, IoCloseOutline} from "react-icons/io5"
+import { IoSearchOutline, IoCloseOutline} from "react-icons/io5"
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
-import { RiSettings3Line } from "react-icons/ri"
+import { RiSettings3Line, RiSearchLine } from "react-icons/ri"
 import { PageBar } from "../../components/PageBar/PageBar"
 import { CategoryCard } from "../../components/CategoryCard/CategoryCard"
 
@@ -21,6 +21,7 @@ export const AlgoSearchSearch = ( ) => {
 
     const SearchContxt = useContext( SearchContext );
     const [ query, setQuery ] = useState( SearchContxt.searchQuery );
+    const [ isOnFocus, setIsOnFocus ] = useState(true);
 
     const navigate = ( route ) => {
         if ( query.length ) {
@@ -49,26 +50,64 @@ export const AlgoSearchSearch = ( ) => {
                 <header className="algosearch-search--page-header">
                     <div className="algosearch-search--page-logo--container">
                         <Link to={"/"}>
-                            <img className="logo" src={ Logo } alt="logo" />
+                            <img className="algosearch-search--page-logo" src={ Logo } alt="logo" />
                         </Link>
                     </div>
 
-                    <div className="algosearch-search--page-search-bar--container">
-                        <input 
-                            placeholder="Search the Web"
-                            className="algosearch-search--page-search-bar-input"
-                            value={ query }
-                            onChange={ (e) => setQuery(e.target.value)}
-                        />
+                    <form 
+                    onSubmit={ ( ) => navigate("/search")} 
+                    className="search-bar-form--container">
+                    <div className="search-bar-input--container">
+                        <div className="search-left-button">
+                            <IoSearchOutline
+                                size={24}
+                            />
+                        </div>
+                        <div className="search-bar-input">
+                            <input 
+                                style={{
+                                    width: "100%",
+                                    height: "100%",
+                                    zIndex: 2,
+                                    // backgroundColor: "red"
+                                }}
+                                placeholder=""
+                                value={query}
+                                onChange={ (e) => setQuery(e.target.value)}
+                                onFocus={ ( ) => setIsOnFocus( prev => true ) }
+                                onBlur={ ( ) => setIsOnFocus( prev => query !== "" ? true : false) }
+                            />
+                            <p 
+                            className="search-bar-input-placeholder"
+                            style={{
+                                display: "flex",
+                                fontSize: isOnFocus ? 0 : 14,
+                                marginBottom: isOnFocus ? 46 : 0,
+                                paddingRight: 10,
+                                paddingLeft: isOnFocus ? 10 : 0,
+                                height: 30,
+                                backgroundColor: "rgba(0, 0, 0, 0)",
+                                alignItems: "center",
+                                color: "rgba(0, 0, 0, 0.6)",
+                                position: "absolute",
+                            }}>Search the Web</p>
+                        </div>
                         {
-                            query !== "" &&
-                            <button 
-                            onClick={ ( ) => setQuery("") }
+                            query !== "" 
+                            ? <button 
+                            onClick={ (e) => { 
+                                e.preventDefault( );
+                                setQuery("");
+                                setIsOnFocus( prev => false );
+                            }}
                             className="close-button">
                                 <IoCloseOutline 
                                     size={24}
                                     color="#000000"
                                 />
+                            </button>
+                            : <button 
+                                className="close-button">
                             </button>
                         }
                         <button 
@@ -76,12 +115,23 @@ export const AlgoSearchSearch = ( ) => {
                             e.preventDefault(); 
                             navigate("/search")} 
                         }
-                        className="search-button">
-                            <IoArrowForwardOutline
-                                size={22}
+                        className="search-button"
+                        style={{
+                          width: query !== "" ? 100 : 46,
+                          paddingLeft: query !== "" ? 20 : 0,
+                          paddingRight: query !== "" ? 20 : 0,
+                        }}>
+                            <p 
+                              className="search-button-p"
+                              style={{
+                                display: query !== "" ? "flex" : "none"
+                              }}>Search</p>
+                            <RiSearchLine
+                              className="search-button-icon" 
                             />
                         </button>
                     </div>
+                </form>
 
                     <div className="algosearch-search--page-sidebar--container">
                         <Link 

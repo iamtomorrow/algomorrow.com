@@ -21,7 +21,6 @@ export const AlgoSearchFooter = ({ restricted }) => {
         setUserTimeZone( country );
     }
 
-
     return (
         <footer className="algo-footer">
             {
@@ -60,9 +59,7 @@ export const AlgoSearchFooter = ({ restricted }) => {
                 </div>
             }
             <div className="footer-inner--container">
-                <p className="footer-inner-p">{ userTimeZone }</p>
-                <a className="footer-inner-a">Privacy</a>
-                <a className="footer-inner-a">Terms</a>
+                <a className="footer-inner-a">Privacy & Terms</a>
                 <a className="footer-inner-a">Help</a>
                 <a className="footer-inner-a">Settings</a>
             </div>

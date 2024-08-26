@@ -3,7 +3,6 @@ import "./Account.css"
 
 import { useEffect, useState } from "react";
 import favicon from '../../images/favicon.png'
-import { Header } from "../../Header/Header";
 import { IoArrowForwardOutline, IoCloseOutline } from "react-icons/io5";
 import { AlgoSearchFooter } from "../../Footer/Footer";
 
@@ -27,7 +26,6 @@ export const AlgoSearchAccount = ( ) => {
             alignItems: "center",
             justifyContent: "space-between",
         }}>
-            <Header restricted={true} />
 
             {
                 accessMethod === "signup"

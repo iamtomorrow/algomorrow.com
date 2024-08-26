@@ -1,15 +1,29 @@
 
-import { Link } from "react-router-dom"
-
 import "./Header.css"
-import Logo from '../images/algo-logo.png'
+import { IoLocationOutline } from "react-icons/io5"
+import { useEffect, useState } from "react"
 
-export const Header = ({ restricted }) => {
+export const AlgoSearchHeader = ( ) => {
+    const [ userTimeZone, setUserTimeZone ] = useState("");
+
+    useEffect( ( ) => {
+        getTimeZone( );
+    }, [ ]);
+
+    const getTimeZone = () => {
+        let country = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        setUserTimeZone( country );
+    }
+
     return (
         <header className="algosearch-header">
-            <Link to={"/"}>
-                <img src={ Logo } className="logo"/>
-            </Link>
+            <div className="algosearch-header-location--container">
+                <IoLocationOutline 
+                    className="algosearch-header-location-icon"
+                />
+                <p className="algosearch-header-location-p">{userTimeZone}</p>
+            </div>
+
         </header>
     )
 }

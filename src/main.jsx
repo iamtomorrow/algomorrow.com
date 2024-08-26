@@ -48,7 +48,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/talisson' element={ <Talisson /> } />
 
         {/* Algo Search */}
-        <Route path='/' element={ <AlgoSearch />} />
+        <Route path='/' element={ <App />} />
         <Route path='/search' element={ <AlgoSearchSearch /> } />
         <Route path='/account' element={ <AlgoSearchAccount />} />
         <Route path='/settings' element={ <AlgoSearchSettings />} />
