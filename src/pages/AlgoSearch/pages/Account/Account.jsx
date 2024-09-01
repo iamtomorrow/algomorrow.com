@@ -161,32 +161,35 @@ export const AlgoSearchAccount = ( ) => {
                     </footer>
                 </div>
             </section> 
-            : <div style={{
-                width: "60%",
-                height: "auto",
-                paddingTop: 40,
-                paddingBottom: 20,
-                borderRadius: 30,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "rgba(0, 0, 0, 0.025)"
-            }}>
-                <p style={{
-                    fontSize: 26,
-                    fontWeight: 600
-                }}>Create a Algo account now.</p>
+            : 
+            <div className="account-main-section--container">
+                <div style={{
+                    width: "60%",
+                    height: "auto",
+                    paddingTop: 40,
+                    paddingBottom: 20,
+                    borderRadius: 30,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: "rgba(0, 0, 0, 0.025)"
+                }}>
+                    <p style={{
+                        fontSize: 26,
+                        fontWeight: 600
+                    }}>Create a Algo account now.</p>
 
-                <div className="create-account-section--container">
-                    <button 
-                    onClick={ ( ) => setAccessMethod("signup") }
-                    className="expanded-button">
-                        <p className="button-text">Create account</p>
-                        <IoArrowForwardOutline 
-                            size={18}
-                        />
-                    </button>
+                    <div className="create-account-section--container">
+                        <button 
+                        onClick={ ( ) => setAccessMethod("signup") }
+                        className="expanded-button">
+                            <p className="button-text">Create account</p>
+                            <IoArrowForwardOutline 
+                                size={18}
+                            />
+                        </button>
+                    </div>
                 </div>
             </div>
             } 
