@@ -34,6 +34,7 @@ import { SearchContextProvider } from './pages/AlgoSearch/contexts/SearchContext
 import { PaletaAppNotifications } from './pages/Paleta/pages/App/pages/Notifications/Notifications.jsx'
 import { PaletaAppLibrary } from './pages/Paleta/pages/App/pages/Library/Library.jsx'
 import { LibraryContextProvider } from './pages/Paleta/contexts/LibraryContext.jsx'
+import { NotFound } from './pages/NotFound/index.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -71,6 +72,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/paleta/account' element={ <PaletaAppAccount /> } />
         <Route path='/paleta/notifications' element={ <PaletaAppNotifications /> } />
         <Route path='/paleta/library' element={ <PaletaAppLibrary /> } />
+
+        <Route path="*" element={ <NotFound /> } />
       </Routes>
     </BrowserRouter>
 

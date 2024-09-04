@@ -32,7 +32,10 @@ export const AlgoSearchAccount = ( ) => {
                 ? <section className="account-main-section--container">
                 <div className="account-main-section-card">
                     <div className="account-section-header">
-                        <h1>Create account</h1>
+                        <h1
+                        style={{
+                            fontSize: 22,
+                        }}>Create account</h1>
                         <p>By creating an Algo account will have access to all our services in just one token.</p>
                     </div>
 
@@ -99,6 +102,11 @@ export const AlgoSearchAccount = ( ) => {
                         <p style={{
                             fontSize: 14
                         }}>Already have an account?</p>
+                        <div style={{
+                            width: 4, 
+                        }}>
+
+                        </div>
                         <button 
                         onClick={ ( ) => setAccessMethod("signin") }
                         style={{
@@ -111,7 +119,10 @@ export const AlgoSearchAccount = ( ) => {
                 : accessMethod !== "" ? <section className="account-main-section--container">
                 <div className="account-main-section-card">
                     <div className="account-section-header">
-                        <h1>Sign in</h1>
+                        <h1
+                        style={{
+                            fontSize: 22,
+                        }}>Sign in</h1>
                     </div>
 
                     <form className="account-main-section-form">
@@ -176,7 +187,7 @@ export const AlgoSearchAccount = ( ) => {
                     backgroundColor: "rgba(0, 0, 0, 0.025)"
                 }}>
                     <p style={{
-                        fontSize: 26,
+                        fontSize: 22,
                         fontWeight: 600
                     }}>Create a Algo account now.</p>
 

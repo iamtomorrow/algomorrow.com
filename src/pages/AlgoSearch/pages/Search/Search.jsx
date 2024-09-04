@@ -48,9 +48,23 @@ export const AlgoSearchSearch = ( ) => {
         <div className="algosearch-search--page">
             <div className="algosearch-search--page-header--container">
                 <header className="algosearch-search--page-header">
-                    <div className="algosearch-search--page-logo--container">
+                    <div
+                    style={{
+                        width: '100%',
+                        height: 100,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        // backgroundColor: "red"
+                    }}>
                         <Link to={"/"}>
-                            <img className="algosearch-search--page-logo" src={ Logo } alt="logo" />
+                            <img 
+                                src={ Logo } 
+                                alt="logo" 
+                                style={{
+                                    width: 100,
+                                }}
+                            />
                         </Link>
                     </div>
 
@@ -149,10 +163,7 @@ export const AlgoSearchSearch = ( ) => {
                 <div className="algosearch-search--page-categories">
                     {
                         searchCategories.map((item) => (
-                            <CategoryCard 
-                                title={ item }
-                                selected={ item === SearchContxt.searchCategory ? true : false }
-                            />
+                            <CategoryCard title={ item } />
                         ))
                     }
                 </div>

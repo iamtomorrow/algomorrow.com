@@ -46,6 +46,7 @@ export const AlgoSearch = ( ) => {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "space-between",
+            // backgroundColor: "red"
         }}>
             {/* <img 
                 src={ favicon } 

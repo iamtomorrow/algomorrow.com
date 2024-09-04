@@ -28,7 +28,7 @@ const App = ( ) => {
     const navigate = ( route ) => {
         if ( query.length ) {
             SearchContxt.updateQuery(query);
-            SearchContxt.updateCategory("Images");
+            SearchContxt.updateCategory("All");
             nav(`${ route }?q=${ query }&category=${ SearchContxt.searchCategory }`);
         }
     }
@@ -52,14 +52,30 @@ const App = ( ) => {
         }}>
             {/* <AlgoSearchHeader /> */}
 
-            <section className="search-bar-section">
+            <section 
+            className="search-bar-section"
+            style={{
+                minHeight: "100vh",
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                // backgroundColor: "red"
+            }}>
                 <div className="search-bar-logo--container">
                     <img className="search-bar-logo" src={ Logo } />
                 </div>
 
                 <form 
                   onSubmit={ ( ) => navigate("/search")} 
-                  className="search-bar-form--container">
+                  style={{
+                    width: "90%",
+                    height: 100,
+                    display: "flex",
+                    alignItems: "center",
+                    // backgroundColor: "green"
+                  }}>
                     <div className="search-bar-input--container">
                         <div className="search-left-button">
                             <IoSearchOutline
@@ -122,22 +138,37 @@ const App = ( ) => {
                     </div>
                 </form>
 
-                <div className="search-categories-bar--container">
-                    <button className="search-category-button">
-                        All
-                    </button>
-                    <button className="search-category-button">
-                        Images
-                    </button>
-                    <button className="search-category-button">
-                        Videos
-                    </button>
-                    <button className="search-category-button">
-                        News
-                    </button>
-                    <button className="search-category-button">
-                        Shopping
-                    </button>
+                <div 
+                style={{
+                    width: "90%",
+                    height: 200,
+                    display: "flex",
+                    // backgroundColor: "blue"
+                }}>
+                    <div
+                    style={{
+                        width: "100%",
+                        height: "50%",
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-around"
+                    }}>
+                        <button className="search-category-button">
+                            All
+                        </button>
+                        <button className="search-category-button">
+                            Images
+                        </button>
+                        <button className="search-category-button">
+                            Videos
+                        </button>
+                        <button className="search-category-button">
+                            News
+                        </button>
+                        <button className="search-category-button">
+                            Shopping
+                        </button>
+                    </div>
                 </div>
             </section>
 
