@@ -5,6 +5,8 @@ import { Oxygen } from "next/font/google";
 import { Chivo } from "next/font/google";
 import "./globals.css";
 import { SearchContextProvider } from "@/contexts/Algo/SearchContext";
+import { RouteContextProvider } from "@/contexts/Algo/RouteContext";
+import { CategoriesContext, CategoriesContextProvider } from "@/contexts/Algo/CategoriesContext";
 
 const chivo = Chivo({
   subsets: ['latin'],
@@ -38,9 +40,13 @@ export default function RootLayout({
       <body
         className={`${chivo.className} ${chivo.className} antialiased`}
       >
+        <CategoriesContextProvider>
+        <RouteContextProvider>
         <SearchContextProvider>
           {children}
         </SearchContextProvider>
+        </RouteContextProvider>
+        </CategoriesContextProvider>
       </body>
     </html>
   );

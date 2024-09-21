@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "../../assets/Algo/images/logo.jpg";
+import Logo from "../../assets/Algo/images/light-logo.png";
 import { Footer } from "@/components/Algo/Footer";
 
 import Image from "next/image";
@@ -11,16 +11,23 @@ import { CgClose } from "react-icons/cg";
 import { BiSearch } from "react-icons/bi";
 import { SearchContext } from "@/contexts/Algo/SearchContext";
 import { useRouter } from "next/navigation";
+import { useRouteContext } from "@/contexts/Algo/RouteContext";
 
 export default function Home() {
+  const SearchContxt = useContext( SearchContext );
+  const { updateRoute } = useRouteContext( );
+
   const [ searchQuery, setSearchQuery ] = useState<string>("");
   const router = useRouter( );
 
   const { query, updateQuery } = useContext( SearchContext );
 
   const updateContextAndNavigate = ( ) => {
-    updateQuery( searchQuery );
-    router.push("/search");
+      const timeStamp = Date.now( );
+      updateQuery( searchQuery );
+      SearchContxt.updateQuery( query );
+      SearchContxt.getSearch( query );
+      // updateRoute(`search?q=${query}&filter=all&timestamp=${timeStamp}`);    
   }
 
   return (
@@ -62,7 +69,7 @@ export default function Home() {
               alt="Algo Logo"
               width={1000}
               style={{
-                width: 140,
+                width: 180,
               }}
             />
           </div>
@@ -112,15 +119,6 @@ export default function Home() {
                 updateContextAndNavigate();
               }}
               className={`${ searchQuery !== "" ? "search-form-search-button--active" : "search-form-clean-button"}`}>
-                {
-                  query !== "" &&
-                  <p
-                  style={{
-                    fontSize: 16,
-                    color: "#ffffff",
-                    marginRight: 3,
-                  }}>Search</p>
-                }
                 <BiSearch 
                   size={20}
                   color="#ffffff"

@@ -1,0 +1,44 @@
+
+li, a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.desk-header--container {
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+}
+
+.desk-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.desk-header-nav {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-link {
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.desk-login-header-button {
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+}
