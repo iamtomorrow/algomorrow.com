@@ -2,13 +2,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Oxygen } from "next/font/google";
+import { Familjen_Grotesk } from "next/font/google";
 import { Chivo } from "next/font/google";
 import "./globals.css";
 import { SearchContextProvider } from "@/contexts/Algo/SearchContext";
 import { RouteContextProvider } from "@/contexts/Algo/RouteContext";
 import { CategoriesContext, CategoriesContextProvider } from "@/contexts/Algo/CategoriesContext";
 
-const chivo = Chivo({
+const FamiljenGrotesk = Familjen_Grotesk({
   subsets: ['latin'],
   display: 'swap',
   weight: "400",
@@ -19,8 +20,8 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+const champions = localFont({
+  src: "./fonts/Champions-Bold.ttf",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
@@ -38,8 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${chivo.className} ${chivo.className} antialiased`}
-      >
+        className={`${champions.className} ${champions.className} antialiased`}>
         <CategoriesContextProvider>
         <RouteContextProvider>
         <SearchContextProvider>
